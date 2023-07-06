@@ -106,17 +106,30 @@ const reverseString = function (str) {
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-const upperFirst =
+const upperFirst = function (str) {
+  let arr_Str = str.split(" ");
 
+  for (let i = 0; i < arr_Str.length; i++) {
+    arr_Str[i] = arr_Str[i].charAt(0).toUpperCase() + arr_Str[i].slice(1);
+  }
+  let result = arr_Str.join(" ");
+  return result;
+};
+//console.log(upperFirst("mario è stato qui"));
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+const cutString = function (str) {
+  arr_Str = str.split("").slice(1, -1).join("");
+  return arr_Str;
+};
+console.log(cutString("giuseppe"));
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const giveMeRandom = function (n1) {
+  let rand = Math.floor(Math.random()) * 11;
+};
